@@ -1,0 +1,17 @@
+#Add Installer to AWX
+- name: Add installer to AWX
+  tower_host:
+    name: "demo-installer"
+    inventory: "network"
+    tower_username: "admin"
+    tower_password: "admin123"
+    tower_host: "http://34.228.212.172/"
+    variables:
+      ansible_host: "3.221.161.128"
+      ansible_port: 22
+  register: result
+  retries: 5
+  delay: 5
+  until: result is not failed
+  tags: 
+    - add-installer-awx
