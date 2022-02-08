@@ -1,6 +1,6 @@
 ---
 - name: server details
-  hosts: dannt
+  hosts: 13.214.176.12
   remote_user: ubuntu
   become: true
 
