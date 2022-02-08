@@ -1,6 +1,6 @@
 ---
 - name: server details
-  hosts: 13.214.176.12
+  hosts: "13.214.176.12"
   remote_user: ubuntu
   become: true
 
