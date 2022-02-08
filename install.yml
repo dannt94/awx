@@ -13,5 +13,9 @@
     apt: 
       name: telnet
       state: present
+  - name: Creates directory
+    file:
+      path: /home/abc
+      state: directory
 
     
