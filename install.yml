@@ -9,10 +9,9 @@
     apt:
       name: wget
       state: present
-  - name: install httpd
+  - name: install telnet
     apt: 
-      name: "{{item}}"
+      name: telnet
       state: present
-    with_items: 
-    - httpd
+
     
