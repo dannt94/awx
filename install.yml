@@ -17,12 +17,10 @@
     file:
       path: /home/repo
       state: directory
-  - name: change directory
+  - name: change directory and delete old code
     command:
-      chdir: /home/repo    
-  - name: delete old code
-    command:
-      cmd: sudo rm -rf awx
+      cmd: cd /home/repo
+      cmd: sudo rm -rf awx  
   - name: clone code
     command:
       cmd: git clone https://github.com/dannt94/awx.git
