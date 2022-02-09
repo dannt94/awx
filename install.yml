@@ -17,11 +17,9 @@
     file:
       path: /home/repo
       state: directory
-  - name: change directory
-    shell:
-      chdir: /home/repo
   - name: clone code
     shell:
+      chdir: /home/repo
       command: git clone https://github.com/dannt94/awx.git
   - name: deploy application with ansible
     shell:
