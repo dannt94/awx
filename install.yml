@@ -20,6 +20,7 @@
   - name: clone code
     command:
       chdir: /home/repo
+      cmd: rm-rf awx
       cmd: git clone https://github.com/dannt94/awx.git
   - name: deploy application with ansible
     command:
