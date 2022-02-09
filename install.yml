@@ -17,6 +17,10 @@
     file:
       path: /home/repo
       state: directory
+  - name: Delete old code 
+    file:
+      path: /home/repo/awx
+      state: absent
   - name: change directory and clone code 
     command:
       chdir: /home/repo 
