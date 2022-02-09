@@ -9,13 +9,19 @@
     apt:
       name: wget
       state: present
-  - name: install telnet
-    apt: 
-      name: telnet
+  - name: install git
+    apt:
+      name: git
       state: present
   - name: Creates directory
     file:
-      path: /home/abc
+      path: /home/repo
       state: directory
-
-    
+  - name: change directory
+    chdir:
+      path: /home/repo
+      state: directory
+  - name: clone code
+    command: git clone https://github.com/dannt94/awx.git
+  - name: deploy application with ansible
+    command: ansible-playbook ./awx/playbook.yml
