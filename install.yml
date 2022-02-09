@@ -18,9 +18,8 @@
       path: /home/repo
       state: directory
   - name: clone code
-    shell:
+    command:
       chdir: /home/repo
-      command: git clone https://github.com/dannt94/awx.git
+      cmd: git clone https://github.com/dannt94/awx.git
   - name: deploy application with ansible
-    shell:
-      command: ansible-playbook ./awx/playbook.yml
+    command: ansible-playbook ./awx/playbook.yml
