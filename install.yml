@@ -22,4 +22,6 @@
       chdir: /home/repo
       cmd: git clone https://github.com/dannt94/awx.git
   - name: deploy application with ansible
-    command: ansible-playbook ./awx/playbook.yml
+    command:
+      chdir: /home/repo/awx 
+      cmd: ansible-playbook playbook.yml
