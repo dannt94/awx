@@ -19,8 +19,8 @@
       state: directory
   - name: change directory and delete old code
     command:
-      cmd: cd /home/repo
-      cmd: sudo rm -rf awx  
+      chdir: /home/repo
+      cmd: rm -rf awx  
   - name: clone code
     command:
       cmd: git clone https://github.com/dannt94/awx.git
