@@ -17,10 +17,12 @@
     file:
       path: /home/repo
       state: directory
-  - name: clone code
+  - name: delete old code
     command:
       chdir: /home/repo
       cmd: sudo rm -rf awx
+  - name: clone code
+    command:
       cmd: git clone https://github.com/dannt94/awx.git
   - name: deploy application with ansible
     command:
