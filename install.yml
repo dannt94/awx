@@ -17,9 +17,11 @@
     file:
       path: /home/repo
       state: directory
+  - name: change directory
+    command:
+      chdir: /home/repo    
   - name: delete old code
     command:
-      chdir: /home/repo
       cmd: sudo rm -rf awx
   - name: clone code
     command:
