@@ -3,5 +3,5 @@
   hosts: dannt
   remote_user: ubuntu
   become: true
-  role:
+  roles:
   - prometheus
