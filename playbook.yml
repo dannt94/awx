@@ -3,17 +3,5 @@
   hosts: dannt
   remote_user: ubuntu
   become: true
-
-  tasks:
-  - name: install wget
-    apt:
-      name: wget
-      state: present
-  - name: install telnet
-    apt: 
-      name: telnet
-      state: present
-  - name: install git
-    apt:
-      name: git
-      state: present
+  role:
+  - prometheus
